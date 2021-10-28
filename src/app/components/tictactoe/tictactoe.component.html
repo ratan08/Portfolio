@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-title>Tic Tac toe Game</mat-card-title>
+    <mat-radio-group>
+        <div class="layout">
+            <div class="gameHeader">
+                <h2>Status: {{ status }}</h2>
+                <h2>Game Start with {{startWith}}</h2>
+            </div>
+
+            <table>
+                <tr *ngFor="let board_row of board; let x = index">
+                    <td *ngFor="let cell of board_row; let y = index" (click)="onclick(x, y)">
+                        {{ cell }}
+                    </td>
+                </tr>
+            </table>
+            <div class="action-btn-container">
+                <button type="button" mat-raised-button color="primary" (click)="clear()">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </mat-radio-group>
+
+</mat-card>

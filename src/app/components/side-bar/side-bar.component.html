@@ -1,0 +1,20 @@
+<mat-list>
+    <mat-list-item (click)="open('/home')">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <div mat-line>Home</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Task</div>
+    <mat-list-item *ngFor="let list of task" (click)="open(list.url)">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line>{{list.name}}</div>
+        <div mat-line>{{list.date}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Practice</div>
+    <mat-list-item *ngFor="let list of practice">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line>{{list.name}}</div>
+        <div mat-line>{{list.date}}</div>
+    </mat-list-item>
+</mat-list>
