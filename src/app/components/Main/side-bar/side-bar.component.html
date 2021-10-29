@@ -5,14 +5,14 @@
     </mat-list-item>
     <mat-divider></mat-divider>
     <div mat-subheader>Task</div>
-    <mat-list-item *ngFor="let list of task" (click)="open(list.url)">
+    <mat-list-item *ngFor="let list of data.task" (click)="open(list.url)">
         <mat-icon mat-list-icon>folder</mat-icon>
         <div mat-line>{{list.name}}</div>
         <div mat-line>{{list.date}}</div>
     </mat-list-item>
     <mat-divider></mat-divider>
     <div mat-subheader>Practice</div>
-    <mat-list-item *ngFor="let list of practice">
+    <mat-list-item *ngFor="let list of data.practice" (click)="open(list.url)">
         <mat-icon mat-list-icon>folder</mat-icon>
         <div mat-line>{{list.name}}</div>
         <div mat-line>{{list.date}}</div>

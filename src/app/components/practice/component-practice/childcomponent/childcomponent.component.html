@@ -1,0 +1,7 @@
+<p>Data Coming from parent Component : {{data}}</p>
+
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Send to parent</mat-label>
+    <input matInput [(ngModel)]="binding">
+</mat-form-field>
+<button mat-raised-button color="primary" class="ml-3" (click)="sendData()"> Send</button>

@@ -1,0 +1,49 @@
+<mat-card class="card m-5">
+    <mat-card-subtitle>Interpolation</mat-card-subtitle>
+    <mat-card-content class="ml-5">
+        <span>{{firstName}}</span>
+        <span>{{lastName}}</span>
+    </mat-card-content>
+
+    <mat-card-subtitle>Property binding</mat-card-subtitle>
+    <mat-card-content class="ml-5">
+        <span [innerHTML]='firstName'></span>
+    </mat-card-content>
+
+    <mat-card-subtitle>Style binding</mat-card-subtitle>
+    <mat-card-content class="ml-5">
+        <span [style.font-size.px]="30" [style.color]="name">{{firstName}}</span>
+    </mat-card-content>
+
+    <mat-card-subtitle>Attribute binding</mat-card-subtitle>
+
+    <mat-card-content class="ml-5">
+        <table>
+            <tr>
+                <th [attr.colspan]="2">Student Details</th>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td>{{firstName}}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>{{lastName}}</td>
+            </tr>
+        </table>
+    </mat-card-content>
+
+</mat-card>
+
+<mat-card class="card m-5">
+    <mat-card-subtitle>Two way data binding</mat-card-subtitle>
+    <mat-form-field class="ml-5" appearance="fill">
+        <mat-label>Enter text (1)</mat-label>
+        <input matInput [(ngModel)]="binding" value="{{binding}}">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="ml-5" appearance="fill">
+        <mat-label>Enter text (2)</mat-label>
+        <input matInput [(ngModel)]="binding" value="{{binding}}">
+    </mat-form-field>
+</mat-card>

@@ -1,0 +1,24 @@
+
+td,div {
+    text-align: center;
+  }
+  td {
+    padding: 0;
+    height: 128px;
+    width: 128px;
+    font-size: 64px;
+    border: 2px solid black;
+  }
+  .gameHeader{
+    display: flex;;
+    justify-content: space-between;
+  }
+  .layout{  
+    display: flex;
+    flex-direction: column;
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+  .action-btn-container{
+    margin-top: 10px;
+  }

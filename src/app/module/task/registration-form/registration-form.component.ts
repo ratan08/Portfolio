@@ -1,10 +1,9 @@
-import { MatDialog } from '@angular/material/dialog';
-
-import { InputService } from '../../../services/formService/input.service';
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormControl, FormGroup, MinLengthValidator, ValidatorFn, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormArray, ValidatorFn, AbstractControl } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { DetailDailogComponent } from 'src/app/Dailog/detail-dailog/detail-dailog.component';
+import { InputService } from 'src/app/services/input.service';
 
 @Component({
   selector: 'app-registration-form',

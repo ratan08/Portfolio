@@ -1,0 +1,18 @@
+<mat-card class="card m-3">
+    <h3>Angular life cycle changes on console</h3>
+</mat-card>
+<mat-card class="card m-3 p-lg-5">
+    <mat-card-title>Component interaction</mat-card-title>
+    <mat-card-subtitle>Parent Component</mat-card-subtitle>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Send to Child</mat-label>
+        <input matInput [(ngModel)]="binding">
+    </mat-form-field>
+    <h4>Data received from Child Component : {{received}}</h4>
+
+    <mat-card class="card m-4">
+        <mat-card-subtitle>Child Component</mat-card-subtitle>
+        <app-childcomponent [data]="binding" (value)="getValue($event)"></app-childcomponent>
+    </mat-card>
+</mat-card>

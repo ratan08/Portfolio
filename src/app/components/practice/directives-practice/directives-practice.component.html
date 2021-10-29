@@ -1,0 +1,36 @@
+<mat-card class="card m-5">
+    <mat-card-title>Structural Directive</mat-card-title>
+    <div class="ml-5" *ngFor="let day of Weekdays">
+        <ng-container *ngIf="(day == 'Saturday' || day == 'Sunday'); else elseTemplate">
+            <p>{{day}} is a weekend</p>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <p>{{day}} is not a weekend</p>
+        </ng-template>
+    </div>
+</mat-card>
+
+<mat-card class="card m-5">
+    <mat-card-title>Attribute Directive</mat-card-title>
+    <div class="ml-5">
+        <button mat-raised-button color='primary' (click)="change()">Change Color</button>
+        <h4>NgStyle</h4>
+        <ul *ngFor="let person of people">
+            <li [ngStyle]="styleOne?{'background-color': 'red'} : {'background-color': 'blue'}">{{ person.name }}
+            </li>
+        </ul>
+        <h4>NgClass</h4>
+        <ul *ngFor="let person of people">
+            <li [ngClass]="{
+                    red:person.country === 'UK',
+                    green:person.country === 'USA',
+                    blue:person.country === 'INDIA'
+                }">{{ person.name }} ({{ person.country }})
+            </li>
+        </ul>
+    </div>
+</mat-card>
+<mat-card class="card m-5">
+    <mat-card-title>Custom Directive</mat-card-title>
+    <p class="ml-5" appColorChange>Custom Directive use for color change</p>
+</mat-card>
