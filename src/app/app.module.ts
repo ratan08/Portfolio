@@ -15,6 +15,7 @@ import { PracticeModule } from './module/practice/practice.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { AuthModule } from './module/auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     MatrialModule,
     FormsModule,
     TaskModule,
-    PracticeModule
+    PracticeModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

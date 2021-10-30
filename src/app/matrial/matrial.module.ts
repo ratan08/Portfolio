@@ -23,6 +23,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -31,6 +32,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   imports: [
     CommonModule,
     MatCheckboxModule,
+    MatSnackBarModule,
     MatCardModule,
     MatStepperModule,
     MatDividerModule,
@@ -60,6 +62,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   exports: [
     MatTreeModule,
     MatCardModule,
+    MatSnackBarModule,
     MatStepperModule,
     MatDividerModule,
     MatDialogModule,
