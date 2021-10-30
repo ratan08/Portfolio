@@ -6,40 +6,40 @@ import { Injectable } from '@angular/core';
 export class FileDataService {
   task = [
     {
-      url: '/registration',
+      url: '/task/registration',
       name: 'Registration Form',
       date: '14/10/2021'
     },
     {
-      url: '/tictactoe',
+      url: '/task/tictactoe',
       name: 'Tictactoe Game',
       date: '21/10/2021'
     },
     {
-      url: '/todo',
+      url: '/task/todo',
       name: 'TODO List',
       date: '21/10/2021'
     }
   ];
   practice = [
     {
-      url: '/reacttiveform-practice',
+      url: '/practice/reacttiveform-practice',
       name: 'Reacttiveform Practice',
       date: '12/10/2021'
     },
     {
-      url: '/component-practice',
+      url: '/practice/component-practice',
       name: 'Component Practice',
       date: '25/10/2021'
     },
     {
-      url: '/template-practice',
+      url: '/practice/template-practice',
       name: 'Template Practice',
       date: '26/10/2021'
     },
 
     {
-      url: '/directives-practice',
+      url: '/practice/directives-practice',
       name: 'Directives Practice',
       date: '27/10/2021'
     },

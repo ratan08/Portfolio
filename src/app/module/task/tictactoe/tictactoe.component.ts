@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tictactoe.component.scss']
 })
 export class TictactoeComponent implements OnInit {
+
   constructor() { }
 
 
@@ -15,6 +16,7 @@ export class TictactoeComponent implements OnInit {
   start = true;
   isCircle = this.start;
   startWith = this.isCircle ? "O" : "X";
+  win = false;
   ngOnInit() {
 
   }
@@ -38,36 +40,49 @@ export class TictactoeComponent implements OnInit {
   }
   checkWin(arg) {
     if (this.board[0][0] == arg && this.board[1][1] == arg && this.board[2][2] == arg) {
-      this.status = "Win " + arg;
-
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[0][2] == arg && this.board[1][1] == arg && this.board[2][0] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[0][0] == arg && this.board[1][0] == arg && this.board[2][0] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[0][1] == arg && this.board[1][1] == arg && this.board[2][1] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[0][2] == arg && this.board[1][2] == arg && this.board[2][2] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[0][0] == arg && this.board[0][1] == arg && this.board[0][2] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[1][0] == arg && this.board[1][1] == arg && this.board[1][2] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
     if (this.board[2][0] == arg && this.board[2][1] == arg && this.board[2][2] == arg) {
-      this.status = "Win " + arg;
+      this.status = "Winner " + arg;
+      this.win = true;
     }
   }
-
+  winner() {
+    alert(this.status);
+    this.clear()
+  }
 
   clear() {
     this.board = [["", "", ""], ["", "", ""], ["", "", ""]];
     this.startWith = this.isCircle ? "O" : "X";
+    this.win = false;
+    this.status = ""
   }
+
 
 }

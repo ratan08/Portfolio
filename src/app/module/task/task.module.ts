@@ -6,6 +6,9 @@ import { TictactoeComponent } from './tictactoe/tictactoe.component';
 import { MatrialModule } from 'src/app/matrial/matrial.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { TaskRoutingModule } from './task-routing.module';
+
+
 
 @NgModule({
   declarations: [RegistrationFormComponent, TodoComponent, TictactoeComponent],
@@ -14,7 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatrialModule,
     FormsModule,
     ReactiveFormsModule,
+    TaskRoutingModule
   ],
+
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TaskModule { }
