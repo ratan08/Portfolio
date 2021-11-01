@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'studentData';
+  logIn;
+  constructor() {
+    this.logIn = localStorage.getItem("loginAuth");
+    console.log(this.logIn);
+  }
 }

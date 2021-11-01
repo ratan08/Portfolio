@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       console.log(userData);
       if (this.loginForm.value.email === userData.email && this.loginForm.value.password === userData.password) {
         this.router.navigateByUrl('/home');
+        localStorage.setItem("loginAuth", "true");
         this.snack.open("Login successfully", 'Done', {
           duration: 3000
         });

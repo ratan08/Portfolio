@@ -1,12 +1,15 @@
-<app-search-bar></app-search-bar>
-<mat-drawer-container>
-    <mat-drawer mode="side" class="drawer" opened>
-        <app-side-bar></app-side-bar>
-    </mat-drawer>
-    <mat-drawer-content class="main">
-        <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
-
-
-<app-footer></app-footer>
+<div *ngIf="logIn === 'true'">
+    <app-search-bar></app-search-bar>
+    <mat-drawer-container>
+        <mat-drawer mode="side" class="drawer" opened>
+            <app-side-bar></app-side-bar>
+        </mat-drawer>
+        <mat-drawer-content class="main">
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+    <app-footer></app-footer>
+</div>
+<div *ngIf="logIn === null || logIn === 'false'">
+    <router-outlet></router-outlet>
+</div>

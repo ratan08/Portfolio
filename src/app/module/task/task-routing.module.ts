@@ -4,10 +4,11 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { TictactoeComponent } from './tictactoe/tictactoe.component';
 import { TodoComponent } from './todo/todo.component';
+import { AuthGuardGuard } from '../auth/auth-guard.guard';
 
 const taskRoute: Routes = [
   {
-    path: "task", children: [
+    path: "task", canActivate: [AuthGuardGuard], children: [
       { path: "", component: RegistrationFormComponent },
       { path: "registration", component: RegistrationFormComponent },
       { path: "tictactoe", component: TictactoeComponent },

@@ -5,10 +5,11 @@ import { ComponentPracticeComponent } from './component-practice/component-pract
 import { DirectivesPracticeComponent } from './directives-practice/directives-practice.component';
 import { ReactiveformPracticeComponent } from './reactiveform-practice/reactiveform-practice.component';
 import { TemplatePracticeComponent } from './template-practice/template-practice.component';
+import { AuthGuardGuard } from '../auth/auth-guard.guard';
 
 const practiceRoute: Routes = [
   {
-    path: 'practice', children: [
+    path: 'practice', canActivate: [AuthGuardGuard], children: [
       { path: '', component: ComponentPracticeComponent },
       { path: 'component-practice', component: ComponentPracticeComponent },
       { path: 'directives-practice', component: DirectivesPracticeComponent },

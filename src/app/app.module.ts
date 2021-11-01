@@ -16,6 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AuthModule } from './module/auth/auth.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { AuthModule } from './module/auth/auth.module';
     FooterComponent,
     SideBarComponent,
     DetailDailogComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
