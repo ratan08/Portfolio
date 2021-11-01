@@ -13,9 +13,14 @@ export class LoginComponent implements OnInit {
   loginForm !: FormGroup;
   emailRegx = /^(([^<>+()\[\]\\.,;:\s@"-#$%&=]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
 
-  constructor(private snack: MatSnackBar, private router: Router, private data: FileDataService) { }
+  constructor(private snack: MatSnackBar, private router: Router, private data: FileDataService) {
+
+  }
 
   ngOnInit() {
+    if (localStorage.getItem('loginAuth') === 'true') {
+      this.router.navigateByUrl('home');
+    }
     this.valid();
   }
   valid() {
@@ -35,15 +40,15 @@ export class LoginComponent implements OnInit {
       let userData = JSON.parse(localStorage.getItem('user'));
       console.log(userData);
       if (this.loginForm.value.email === userData.email && this.loginForm.value.password === userData.password) {
-
         localStorage.setItem("loginAuth", "true");
-        //location.reload();
 
         this.router.navigateByUrl('/home');
+
         this.data.logIn = 'true';
         this.snack.open("Login successfully", 'Done', {
           duration: 3000
         });
+        location.reload();
       } else {
         this.snack.open("Enter email and password properly or Register First", 'Done', {
           duration: 3000
@@ -53,4 +58,5 @@ export class LoginComponent implements OnInit {
     }
 
   }
+
 }

@@ -9,12 +9,28 @@ import { AuthGuardGuard } from '../auth/auth-guard.guard';
 
 const practiceRoute: Routes = [
   {
-    path: 'practice', canActivate: [AuthGuardGuard], children: [
-      { path: '', component: ComponentPracticeComponent },
-      { path: 'component-practice', component: ComponentPracticeComponent },
-      { path: 'directives-practice', component: DirectivesPracticeComponent },
-      { path: 'reacttiveform-practice', component: ReactiveformPracticeComponent },
-      { path: 'template-practice', component: TemplatePracticeComponent },
+    path: '', component: ComponentPracticeComponent, children: [
+
+      {
+        path: 'component-practice',
+        canActivate: [AuthGuardGuard],
+        component: ComponentPracticeComponent
+      },
+      {
+        path: 'directives-practice',
+        canActivate: [AuthGuardGuard],
+        component: DirectivesPracticeComponent
+      },
+      {
+        path: 'reacttiveform-practice',
+        canActivate: [AuthGuardGuard],
+        component: ReactiveformPracticeComponent
+      },
+      {
+        path: 'template-practice',
+        canActivate: [AuthGuardGuard],
+        component: TemplatePracticeComponent
+      },
     ]
   }
 ]

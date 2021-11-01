@@ -5,8 +5,16 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AuthGuardGuard } from './module/auth/auth-guard.guard';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/auth", pathMatch: "full" },
-  { path: 'home', canActivate: [AuthGuardGuard], component: HomeComponent },
+  {
+    path: "",
+    redirectTo: "/auth",
+    pathMatch: "full",
+  },
+  {
+    path: 'home',
+    canActivate: [AuthGuardGuard],
+    component: HomeComponent
+  },
 
 ];
 

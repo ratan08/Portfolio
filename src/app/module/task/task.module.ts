@@ -5,11 +5,7 @@ import { TodoComponent } from './todo/todo.component';
 import { TictactoeComponent } from './tictactoe/tictactoe.component';
 import { MatrialModule } from 'src/app/matrial/matrial.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { TaskRoutingModule } from './task-routing.module';
-
-
-
 @NgModule({
   declarations: [RegistrationFormComponent, TodoComponent, TictactoeComponent],
   imports: [
@@ -19,7 +15,10 @@ import { TaskRoutingModule } from './task-routing.module';
     ReactiveFormsModule,
     TaskRoutingModule
   ],
-
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class TaskModule { }
+export class TaskModule {
+  constructor() {
+    console.log("Task module loaded");
+  }
+}

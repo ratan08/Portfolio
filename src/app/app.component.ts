@@ -9,6 +9,5 @@ import { FileDataService } from './services/file-data.service';
 export class AppComponent {
 
   constructor(public data: FileDataService) {
-
   }
 }

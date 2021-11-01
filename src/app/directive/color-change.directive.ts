@@ -9,7 +9,7 @@ export class ColorChangeDirective {
     for (let i = 5; i < 30; i++) {
       setTimeout(() => {
         render.setStyle(element.nativeElement, 'font-size', i + "px");
-        console.log(i);
+
       }, 5000);
 
     }

@@ -21,4 +21,8 @@ import { ColorChangeDirective } from 'src/app/directive/color-change.directive';
     PracticeRoutingModule
   ]
 })
-export class PracticeModule { }
+export class PracticeModule {
+  constructor() {
+    console.log("practice module loaded");
+  }
+}

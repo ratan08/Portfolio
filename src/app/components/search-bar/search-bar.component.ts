@@ -17,7 +17,7 @@ export class SearchBarComponent implements OnInit {
     localStorage.setItem("loginAuth", 'false');
 
     this.data.logIn = 'false'
-    this.route.navigateByUrl('auth');
+    this.route.navigateByUrl('login');
 
   }
 }
