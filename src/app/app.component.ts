@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FileDataService } from './services/file-data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  logIn;
-  constructor() {
-    this.logIn = localStorage.getItem("loginAuth");
-    console.log(this.logIn);
+
+  constructor(public data: FileDataService) {
+
   }
 }

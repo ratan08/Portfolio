@@ -42,7 +42,9 @@ export class FileDataService {
       url: '/practice/directives-practice',
       name: 'Directives Practice',
       date: '27/10/2021'
-    }, {
+    },
+
+    {
       url: '/auth/login',
       name: 'Login Page',
       date: '30/10/2021'
@@ -52,6 +54,10 @@ export class FileDataService {
       date: '30/10/2021'
     },
 
-  ]
-  constructor() { }
+  ];
+  logIn;
+  constructor() {
+    this.logIn = localStorage.getItem("loginAuth");
+    console.log(this.logIn);
+  }
 }

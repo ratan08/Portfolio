@@ -1,4 +1,4 @@
-<div *ngIf="logIn === 'true'">
+<div *ngIf="data.logIn === 'true'">
     <app-search-bar></app-search-bar>
     <mat-drawer-container>
         <mat-drawer mode="side" class="drawer" opened>
@@ -10,6 +10,6 @@
     </mat-drawer-container>
     <app-footer></app-footer>
 </div>
-<div *ngIf="logIn === null || logIn === 'false'">
+<div *ngIf="data.logIn === null || data.logIn === 'false'">
     <router-outlet></router-outlet>
 </div>
