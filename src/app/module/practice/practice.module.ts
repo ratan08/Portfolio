@@ -9,16 +9,27 @@ import { DirectivesPracticeComponent } from './directives-practice/directives-pr
 import { TemplatePracticeComponent } from './template-practice/template-practice.component';
 import { ChildcomponentComponent } from './component-practice/childcomponent/childcomponent.component';
 import { ColorChangeDirective } from 'src/app/directive/color-change.directive';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [ComponentPracticeComponent, ColorChangeDirective, ChildcomponentComponent, ReactiveformPracticeComponent, DirectivesPracticeComponent, TemplatePracticeComponent],
+  declarations: [
+    ComponentPracticeComponent,
+    ColorChangeDirective,
+    ChildcomponentComponent,
+    ReactiveformPracticeComponent,
+    DirectivesPracticeComponent,
+    TemplatePracticeComponent,
+    HttpComponent
+  ],
   imports: [
     CommonModule,
     MatrialModule,
     FormsModule,
     ReactiveFormsModule,
-    PracticeRoutingModule
+    PracticeRoutingModule,
+    HttpClientModule
   ]
 })
 export class PracticeModule {

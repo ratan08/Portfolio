@@ -29,6 +29,9 @@ export class LoginComponent implements OnInit {
       'password': new FormControl('', [Validators.required, Validators.pattern(/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{8,30}$/)]),
     })
   }
+  open() {
+    this.router.navigateByUrl('register');
+  }
   submit() {
 
     if (this.loginForm.invalid) {

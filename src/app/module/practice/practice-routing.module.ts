@@ -6,10 +6,11 @@ import { DirectivesPracticeComponent } from './directives-practice/directives-pr
 import { ReactiveformPracticeComponent } from './reactiveform-practice/reactiveform-practice.component';
 import { TemplatePracticeComponent } from './template-practice/template-practice.component';
 import { AuthGuardGuard } from '../auth/auth-guard.guard';
+import { HttpComponent } from './http/http.component';
 
 const practiceRoute: Routes = [
   {
-    path: '', component: ComponentPracticeComponent, children: [
+    path: '', children: [
 
       {
         path: 'component-practice',
@@ -30,7 +31,11 @@ const practiceRoute: Routes = [
         path: 'template-practice',
         canActivate: [AuthGuardGuard],
         component: TemplatePracticeComponent
-      },
+      }, {
+        path: 'http',
+        canActivate: [AuthGuardGuard],
+        component: HttpComponent
+      }
     ]
   }
 ]

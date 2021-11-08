@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AuthModule } from './module/auth/auth.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CdkColumnDef } from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     MatrialModule,
     FormsModule,
     TaskModule,
+
     PracticeModule,
     AuthModule
   ],

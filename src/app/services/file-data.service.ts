@@ -22,14 +22,14 @@ export class FileDataService {
   ];
   practice = [
     {
-      url: '/reacttiveform-practice',
-      name: 'Reacttiveform Practice',
-      date: '12/10/2021'
+      url: '/http',
+      name: 'Http Practice',
+      date: '8/11/2021'
     },
     {
-      url: '/component-practice',
-      name: 'Component Practice',
-      date: '25/10/2021'
+      url: '/directives-practice',
+      name: 'Directives Practice',
+      date: '27/10/2021'
     },
     {
       url: '/template-practice',
@@ -37,15 +37,22 @@ export class FileDataService {
       date: '26/10/2021'
     },
     {
-      url: '/directives-practice',
-      name: 'Directives Practice',
-      date: '27/10/2021'
+      url: '/component-practice',
+      name: 'Component Practice',
+      date: '25/10/2021'
     },
+    {
+      url: '/reacttiveform-practice',
+      name: 'Reacttiveform Practice',
+      date: '12/10/2021'
+    },
+
+
 
   ];
   logIn;
   constructor() {
     this.logIn = localStorage.getItem("loginAuth");
-    console.log(this.logIn);
+    // console.log(this.logIn);
   }
 }

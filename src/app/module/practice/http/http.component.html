@@ -1,0 +1,21 @@
+<mat-card class="m-3">
+    <mat-card-title>HTTP Client</mat-card-title>
+    <hr>
+    <mat-card-subtitle>GET, POST, PUT and DELETE method</mat-card-subtitle>
+    <input type="text" (keyup.enter)="addPost(title)" placeholder="Enter Data" #title class="form-control">
+    <table class="demo-table" class="mt-3">
+        <tr *ngFor="let data of postData">
+
+            <td>{{data.title}}</td>
+            <td><button mat-icon-button color="accent" (click)="editPost(data)">
+                    <mat-icon>update</mat-icon>
+                </button>
+            </td>
+            <td><button mat-icon-button color="warn" (click)="deletePost(data.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+</mat-card>

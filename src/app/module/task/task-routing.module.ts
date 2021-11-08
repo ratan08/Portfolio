@@ -19,7 +19,7 @@ import { HomeComponent } from 'src/app/components/home/home.component';
 const taskRoute: Routes = [
   {
     path: '',
-    component: RegistrationFormComponent,
+
     children: [
       {
         path: 'registration',
