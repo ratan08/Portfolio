@@ -7,6 +7,7 @@ import { ReactiveformPracticeComponent } from './reactiveform-practice/reactivef
 import { TemplatePracticeComponent } from './template-practice/template-practice.component';
 import { AuthGuardGuard } from '../auth/auth-guard.guard';
 import { HttpComponent } from './http/http.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const practiceRoute: Routes = [
   {
@@ -35,6 +36,10 @@ const practiceRoute: Routes = [
         path: 'http',
         canActivate: [AuthGuardGuard],
         component: HttpComponent
+      }, {
+        path: 'rxjs',
+        canActivate: [AuthGuardGuard],
+        component: RxjsComponent
       }
     ]
   }

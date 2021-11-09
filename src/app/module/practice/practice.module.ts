@@ -11,6 +11,7 @@ import { ChildcomponentComponent } from './component-practice/childcomponent/chi
 import { ColorChangeDirective } from 'src/app/directive/color-change.directive';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveformPracticeComponent,
     DirectivesPracticeComponent,
     TemplatePracticeComponent,
-    HttpComponent
+    HttpComponent,
+    RxjsComponent
   ],
   imports: [
     CommonModule,

@@ -22,6 +22,11 @@ export class FileDataService {
   ];
   practice = [
     {
+      url: '/rxjs',
+      name: 'Rxjs Practice',
+      date: '9/11/2021'
+    },
+    {
       url: '/http',
       name: 'Http Practice',
       date: '8/11/2021'
