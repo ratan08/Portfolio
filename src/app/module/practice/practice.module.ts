@@ -12,6 +12,9 @@ import { ColorChangeDirective } from 'src/app/directive/color-change.directive';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { Com1Component } from './subject/com1/com1.component';
+import { Com2Component } from './subject/com2/com2.component';
+import { Com3Component } from './subject/com3/com3.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     DirectivesPracticeComponent,
     TemplatePracticeComponent,
     HttpComponent,
-    RxjsComponent
+    RxjsComponent,
+    Com1Component,
+    Com2Component,
+    Com3Component
   ],
   imports: [
     CommonModule,

@@ -48,7 +48,7 @@ export class FileDataService {
     },
     {
       url: '/reacttiveform-practice',
-      name: 'Reacttiveform Practice',
+      name: 'Reacttiveform',
       date: '12/10/2021'
     },
 

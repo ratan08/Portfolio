@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { exit } from 'process';
-import { defer, from, fromEvent, generate, interval, observable, Observable, of, range, timer } from 'rxjs';
+import { AsyncSubject, defer, from, fromEvent, generate, interval, observable, Observable, of, range, ReplaySubject, timer } from 'rxjs';
+import { SubjectDataService } from 'src/app/services/subject-data.service';
 import { textChangeRangeIsUnchanged } from 'typescript';
 
 @Component({
@@ -25,13 +26,45 @@ export class RxjsComponent implements OnInit, AfterViewInit {
     x => x + 2
   );
   @ViewChild('from', { static: true }) button: ElementRef;
-
-  constructor(private snack: MatSnackBar) { }
-  ngOnInit(): void { }
+  subjectData;
+  constructor(private snack: MatSnackBar, private subject: SubjectDataService) { }
+  ngOnInit(): void {
+    this.subject.recived.subscribe((res) => {
+      this.subjectData = res;
+    })
+  }
   ngAfterViewInit(): void {
     fromEvent(this.button.nativeElement, 'click')
       .subscribe(res => console.log(res))
+  }
+  show() {
+    const sub = new AsyncSubject();
+    console.log("AsyncSubject");
 
+    sub.next(123);
+    sub.subscribe(res => console.log(res));
+    sub.next(456);
+    sub.subscribe(res => console.log(res));
+    sub.complete();
+
+
+    console.log("ReplaySubject");
+
+    const data = new ReplaySubject(3);
+    data.next("Video " + 1);
+    data.next("Video " + 2);
+    data.next("Video " + 3);
+    data.next("Video " + 4);
+    data.next("Video " + 5);
+    data.next("Video " + 6);
+    data.next("Video " + 7);
+    data.next("Video " + 8);
+    data.subscribe(res => {
+      console.log(res);
+    })
+    this.snack.open("Check console", 'Done', {
+      duration: 3000
+    });
   }
   interval() {
     let ab = this.inter.subscribe(res => {

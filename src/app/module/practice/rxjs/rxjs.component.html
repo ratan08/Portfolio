@@ -26,3 +26,22 @@
         <li>generate()</li> <button mat-raised-button (click)="generate()">call generate() method</button>
     </mat-card-subtitle>
 </mat-card>
+<mat-card class="m-3">
+    <mat-card-title>Subject and Behavior Subject</mat-card-title>
+    <hr>
+    <mat-card-subtitle>Data Recived : {{subjectData}}</mat-card-subtitle>
+    <br>
+    <mat-card-content class="component">
+        <app-com1></app-com1>
+        <app-com2></app-com2>
+        <app-com3></app-com3>
+    </mat-card-content>
+    <br>
+
+    <mat-card-title>ReplaySubject and AsyncSubject </mat-card-title>
+    <hr>
+
+    <button mat-raised-button class="btn btn-success mr-2" (click)="show()">Subscribe</button>
+
+
+</mat-card>

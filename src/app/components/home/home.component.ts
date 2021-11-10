@@ -9,7 +9,7 @@ import { FileDataService } from 'src/app/services/file-data.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private data: FileDataService) {
+  constructor(private router: Router, public data: FileDataService) {
   }
 
   ngOnInit(): void {
