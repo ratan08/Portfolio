@@ -14,8 +14,8 @@ export class TodoComponent implements OnInit {
     this.newTodo = '';
     this.todos = [];
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit() {
+
   }
 
   addTodo(event: { preventDefault: () => void; }) {

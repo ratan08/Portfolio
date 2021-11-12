@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FileDataService } from './services/file-data.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { FileDataService } from './services/file-data.service';
 })
 export class AppComponent {
 
-  constructor(public data: FileDataService) {
+  constructor(public data: FileDataService, private router: Router) {
+
+
   }
 }

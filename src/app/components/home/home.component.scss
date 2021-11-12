@@ -1,15 +1,35 @@
 .container{
     min-height: 100vh;
-}
-.card{
-    width: fit-content;
-    margin: 10%;
-    img{
-        width: 100%;
-        height: 60%;
-    }
+    padding: 4% 5%;
+    font-family: Arial, Helvetica, sans-serif;
    
 }
+mat-tab{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    width: 28%;
+    height: fit-content;
+    margin: 20px;
+    img{
+       width:  -webkit-fill-available;
+       margin-top: 10px;
+       padding-left: 0px;
+       padding-right: 0PX;
+    }
+    p{
+        margin-top: 10px;
+    }
+}
+
+.card1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 // .card{
 //     height: 35vh;
 //     width: 15vw;

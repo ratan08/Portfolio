@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { FileDataService } from 'src/app/services/file-data.service';
 
@@ -10,6 +10,8 @@ import { FileDataService } from 'src/app/services/file-data.service';
 export class SideBarComponent implements OnInit {
 
   constructor(private router: Router, public data: FileDataService) { }
+
+
 
   ngOnInit(): void {
   }

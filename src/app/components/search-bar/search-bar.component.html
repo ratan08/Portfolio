@@ -1,7 +1,10 @@
 <div class="navbar nav">
     <form class="d-flex mr-5">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn  btn-outline-light ml-3" type="button">Search</button>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()" class="menuIcon">menu</mat-icon>
+        </button>
+        <input class="form-control ml-4 me-2" type="search" placeholder="Search" aria-label="Search">
+        <!-- <button class="btn  btn-outline-light ml-3" type="button">Search</button> -->
     </form>
     <div>
         <form>
@@ -11,3 +14,15 @@
         </form>
     </div>
 </div>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <app-side-bar></app-side-bar>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

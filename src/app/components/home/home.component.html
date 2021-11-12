@@ -1,18 +1,38 @@
 <div class="container">
-    <mat-card class="card">
-        <img src="./assets/wait.png">
-    </mat-card>
-</div>
+    <h1>All Courses</h1>
+    <mat-tab-group>
+        <mat-tab label="Practice" class="practice">
+            <div class="card1">
+                <mat-card class="card" *ngFor="let data of fileData.practice">
+                    <mat-card-title>{{data.name}}</mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <img src="../assets/angular1.jpg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto iste voluptate voluptates,
+                            doloremque.
+                        <div>
+                            <button mat-raised-button color="warn" routerLink="{{data.url}}">View Course</button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </mat-tab>
+        <mat-tab label="Task">
+            <div class="card1">
+                <mat-card class="card" *ngFor="let data of fileData.task">
+                    <mat-card-title>{{data.name}}</mat-card-title>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <img src="../assets/angular1.jpg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto iste voluptate voluptates,
+                            doloremque.
+                        <div>
+                            <button mat-raised-button color="warn" routerLink="{{data.url}}">View Course</button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </mat-tab>
 
-<!-- <div class="practice">
-    <mat-card class="card m-2 p-4" *ngFor="let content of data.practice">
-        <img src="../assets/angular.svg">
-        <p>{{content.name}}</p>
-    </mat-card>
+    </mat-tab-group>
 </div>
-<div class="practice">
-    <mat-card class="card1 m-2 p-4" *ngFor="let content of data.task">
-        <img src="../assets/angular.svg">
-        <p>{{content.name}}</p>
-    </mat-card>
-</div> -->

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Route, Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -51,12 +52,10 @@ export class FileDataService {
       name: 'Reacttiveform',
       date: '12/10/2021'
     },
-
-
-
   ];
   logIn;
-  constructor() {
+
+  constructor(private router: Router) {
     this.logIn = localStorage.getItem("loginAuth");
     // console.log(this.logIn);
   }

@@ -24,6 +24,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -57,9 +58,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTabsModule
   ],
   exports: [
+    MatTabsModule,
     MatTreeModule,
     MatCardModule,
     MatSnackBarModule,
